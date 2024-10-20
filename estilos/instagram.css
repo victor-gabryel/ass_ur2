@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/*Fontes_Externas======================================================================================*/
+@font-face {
+  font-family: 'Bebas';
+  src: url('../fontes/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tiny";
+  src: url('../fontes/Tiny5-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/*Raiz=================================================================================================*/
+:root{
+  --cor1:#DFF5EA;
+  --cor2:#7CFAE7;
+  --cor3:#7FE4FA;
+  --cor4:#19D2FA;
+  --cor5:#379AFA;
+  --cor6:#5F7DFA;
+
+  --fonte-padrao: Arial, Helvetica, sans-serif;
+  --fonte-bebas: 'Bebas';
+  --fonte-tiny: 'Tiny';
+}
+
+
+
+/*Configurações_Gerais=================================================================================*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--fonte-padrao);
+}
+
+
+
+/*Div_ImgFundo=========================================================================================*/
+div.imgfundo{
+  background-image: url(../imagens/asso_img_05.jpeg);
+  height: 98vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/*Div.main=============================================================================================*/
+div.main {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/*Table================================================================================================*/
+table {
+    margin: auto;
+}
+
+table td {
+  padding: 0px 20px 0px 20px;
+}
+
+table td p {
+  letter-spacing: 1px;
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  min-width: 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.9em;
+  border-radius: 4px;
+}
+
+/*Fazer animação*/
+table td div#qrcode:hover {
+
+}
+
+table td div#qrcode img {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 4px;
+}
+
+
+
+/*@media===============================================================================================*/
+@media (max-width: 690px) {
+    table td p {
+        min-width: 160px;
+        font-size: 0.5em;
+    }
+    table td div#qrcode img {
+        max-width: 140px; 
+        max-height: 135px; 
+    }
+}
+
+@media (max-width: 550px) {
+  table td p {
+      min-width: 150px;
+      font-size: 0.5em;
+  }
+  table td div#qrcode img {
+      max-width: 150px;
+      max-height: 150px;  
+  }
+  table td {
+    padding: 0px 5px 0px 5px;
+  }
+}
